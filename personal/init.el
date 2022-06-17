@@ -1,3 +1,6 @@
+;; Add additional packages
+(prelude-require-packages '(gdscript-mode))
+
 ;; Make C-a work in term-mode
 (defun c-a-fixing-term-mode-hook ()
     (let ((oldmap (cdr (assoc 'prelude-mode minor-mode-map-alist)))
