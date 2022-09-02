@@ -10,6 +10,7 @@
         (make-local-variable 'minor-mode-overriding-map-alist)
         (push `(prelude-mode . ,newmap) minor-mode-overriding-map-alist)))
 (add-hook 'term-mode-hook 'c-a-fixing-term-mode-hook)
+(add-hook 'vterm-mode-hook 'c-a-fixing-term-mode-hook)
 
 ;; Start server
 (load "server")
