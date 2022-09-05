@@ -1,5 +1,5 @@
 ;; Add additional packages
-(prelude-require-packages '(gdscript-mode))
+(prelude-require-packages '(gdscript-mode vterm ledger-mode))
 
 ;; Make C-a work in term-mode
 (defun c-a-fixing-term-mode-hook ()
