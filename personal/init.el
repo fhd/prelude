@@ -1,7 +1,11 @@
 ;; Add additional packages
 (prelude-require-packages '(gdscript-mode vterm ledger-mode))
 
-;; Make C-a work in term-mode
+;; Start server
+(load "server")
+(unless (server-running-p) (server-start))
+
+;; Make C-a work in *term-mode
 (defun c-a-fixing-term-mode-hook ()
     (let ((oldmap (cdr (assoc 'prelude-mode minor-mode-map-alist)))
              (newmap (make-sparse-keymap)))
@@ -11,10 +15,6 @@
         (push `(prelude-mode . ,newmap) minor-mode-overriding-map-alist)))
 (add-hook 'term-mode-hook 'c-a-fixing-term-mode-hook)
 (add-hook 'vterm-mode-hook 'c-a-fixing-term-mode-hook)
-
-;; Start server
-(load "server")
-(unless (server-running-p) (server-start))
 
 ;; Split windows more sensibly
 ;; From: https://emacs.stackexchange.com/a/33756
