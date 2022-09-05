@@ -5,6 +5,12 @@
 (load "server")
 (unless (server-running-p) (server-start))
 
+;; Open vterm from crux-visit-term-buffer
+(defun crux-vterm (buffer-name)
+    ;; TODO: Set crux-shell and buffer-name
+    (vterm))
+(customize-set-variable 'crux-term-func #'crux-vterm)
+
 ;; Make C-a work in *term-mode
 (defun c-a-fixing-term-mode-hook ()
     (let ((oldmap (cdr (assoc 'prelude-mode minor-mode-map-alist)))
