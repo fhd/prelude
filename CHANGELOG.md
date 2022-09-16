@@ -4,6 +4,7 @@
 
 ### New features
 
+* Add a module to enable Literate Programming
 * Add a Racket module.
 * Add a Lua module.
 * Auto-install `racket-mode` if needed.
@@ -15,6 +16,7 @@
 * Remove `company-lsp`.
 * Replace `yank-pop` key-binding to `counse-yank-pop` for `ivy-mode`.
 * The keybinding for `proced` is now enabled unconditionally.
+* Replace prelude-go backend with `lsp` instead of unmaintained tools
 
 ### Bugs fixed
 
