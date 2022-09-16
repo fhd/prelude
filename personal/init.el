@@ -39,3 +39,9 @@
                     (split-window-below))))))
 
 (setq split-window-preferred-function #'my-split-window-sensibly)
+
+;; Additional smartparens key bindings
+(define-key smartparens-mode-map
+  (kbd "M-S-<delete>") 'sp-unwrap-sexp)
+(define-key smartparens-mode-map
+  (kbd "M-S-<backspace>") 'sp-backward-unwrap-sexp)
