@@ -45,3 +45,6 @@
   (kbd "M-S-<delete>") 'sp-unwrap-sexp)
 (define-key smartparens-mode-map
   (kbd "M-S-<backspace>") 'sp-backward-unwrap-sexp)
+
+;; Automatically save org-mode archive files
+(setq org-archive-subtree-save-file-p t)
