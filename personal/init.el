@@ -1,5 +1,5 @@
 ;; Add additional packages
-(prelude-require-packages '(gdscript-mode vterm ledger-mode arduino-mode))
+(prelude-require-packages '(gdscript-mode vterm ledger-mode arduino-cli-mode))
 
 ;; Start server
 (load "server")
@@ -48,3 +48,9 @@
 
 ;; Automatically save org-mode archive files
 (setq org-archive-subtree-save-file-p t)
+
+;; Use c-mode and arduino-cli-mode for Arduino .ino files
+(add-to-list 'auto-mode-alist '("\\.ino\\'" . (lambda ()
+                                                (progn
+                                                  (c-mode)
+                                                  (arduino-cli-mode)))))
