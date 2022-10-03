@@ -1,5 +1,9 @@
 ;; Add additional packages
-(prelude-require-packages '(gdscript-mode vterm ledger-mode arduino-cli-mode))
+(prelude-require-packages '(gdscript-mode
+                            vterm
+                            ledger-mode
+                            arduino-cli-mode
+                            rg))
 
 ;; Start server
 (load "server")
