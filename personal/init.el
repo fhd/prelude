@@ -3,7 +3,8 @@
                             vterm
                             ledger-mode
                             arduino-cli-mode
-                            rg))
+                            rg
+                            csharp-mode))
 
 ;; Start server
 (load "server")
