@@ -4,7 +4,8 @@
                             ledger-mode
                             arduino-cli-mode
                             rg
-                            csharp-mode))
+                            csharp-mode
+                            plantuml-mode))
 
 ;; Start server
 (load "server")
