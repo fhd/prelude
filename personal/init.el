@@ -67,3 +67,6 @@
 
 ;; Use Stroustrup-style indentation for C/C++
 (setq c-default-style "stroustrup")
+
+;; Disable automatic formatting on save
+(setq prelude-format-on-save nil)
