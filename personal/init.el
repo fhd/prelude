@@ -70,3 +70,6 @@
 
 ;; Disable automatic formatting on save
 (setq prelude-format-on-save nil)
+
+;; Hide compilation buffer for LaTeX
+(setq TeX-show-compilation nil)
