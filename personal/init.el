@@ -76,3 +76,9 @@
 
 ;; Hide compilation buffer for LaTeX
 (setq TeX-show-compilation nil)
+
+;; Disable tab highlighting in gdscript-mode
+(add-hook 'whitespace-mode-hook
+          (lambda ()
+            (when (eq major-mode 'gdscript-mode)
+              (whitespace-toggle-options '(tabs)))))
