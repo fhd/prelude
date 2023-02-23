@@ -65,6 +65,9 @@
 (org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
 (setq org-plantuml-jar-path (expand-file-name "~/Software/plantuml.jar"))
 
+;; Support multiple languages for org-mode -> LaTeX -> PDF conversion
+(add-to-list 'org-latex-packages-alist '("AUTO" "babel" t ("pdflatex")))
+
 ;; Use Stroustrup-style indentation for C/C++
 (setq c-default-style "stroustrup")
 
