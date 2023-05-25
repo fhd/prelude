@@ -82,3 +82,6 @@
           (lambda ()
             (when (eq major-mode 'gdscript-mode)
               (whitespace-toggle-options '(tabs)))))
+
+;; Use web-mode for PHP files
+(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
