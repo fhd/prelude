@@ -85,3 +85,8 @@
 
 ;; Use web-mode for PHP files
 (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+
+;; Workaround for editorconfig overwriting web-mode block indentation
+;; See: https://github.com/editorconfig/editorconfig-emacs/issues/79
+(add-hook 'editorconfig-custom-hooks
+          (lambda (hash) (setq web-mode-block-padding 0)))
