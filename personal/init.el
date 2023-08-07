@@ -68,8 +68,13 @@
 ;; Support multiple languages for org-mode -> LaTeX -> PDF conversion
 (add-to-list 'org-latex-packages-alist '("AUTO" "babel" t ("pdflatex")))
 
-;; Use Stroustrup-style indentation for C/C++
-(setq c-default-style "stroustrup")
+;; Set C style based on language
+(setq prelude-c-mode-common-hook
+      (lambda ()
+        (setq c-default-style '((c++-mode . "stroustrup")
+                                (csharp-mode . "csharp")
+                                (java-mode . "java")
+                                (other . "k&r")))))
 
 ;; Disable automatic formatting on save
 (setq prelude-format-on-save nil)
