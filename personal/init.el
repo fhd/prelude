@@ -61,6 +61,9 @@
                                                   (c-mode)
                                                   (arduino-cli-mode)))))
 
+;; Use nxml-mode for .(a)xaml files
+(add-to-list 'auto-mode-alist '("\\.a?xaml$" . nxml-mode))
+
 ;; Support plantuml in org-mode
 (org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
 (setq org-plantuml-jar-path (expand-file-name "~/Software/plantuml.jar"))
