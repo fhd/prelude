@@ -98,3 +98,6 @@
 ;; See: https://github.com/editorconfig/editorconfig-emacs/issues/79
 (add-hook 'editorconfig-custom-hooks
           (lambda (hash) (setq web-mode-block-padding 0)))
+
+;; Disable guru-mode
+(setq prelude-guru nil)
