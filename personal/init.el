@@ -64,9 +64,16 @@
 ;; Use nxml-mode for .(a)xaml files
 (add-to-list 'auto-mode-alist '("\\.a?xaml$" . nxml-mode))
 
+;; Use plantuml-mode for .puml files
+(add-to-list 'auto-mode-alist '("\\.puml$" . plantuml-mode))
+
+;; Evaluate PlantUML locally
+(setq plantuml-jar-path "~/Software/plantuml.jar")
+(setq plantuml-default-exec-mode 'jar)
+
 ;; Support plantuml in org-mode
 (org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
-(setq org-plantuml-jar-path (expand-file-name "~/Software/plantuml.jar"))
+(setq org-plantuml-jar-path (expand-file-name plantuml-jar-path))
 
 ;; Support multiple languages for org-mode -> LaTeX -> PDF conversion
 (add-to-list 'org-latex-packages-alist '("AUTO" "babel" t ("pdflatex")))
