@@ -55,6 +55,9 @@
 ;; Automatically save org-mode archive files
 (setq org-archive-subtree-save-file-p t)
 
+;; Show clocked time in hours
+(setq org-duration-format 'h:mm)
+
 ;; Use c-mode and arduino-cli-mode for Arduino .ino files
 (add-to-list 'auto-mode-alist '("\\.ino\\'" . (lambda ()
                                                 (progn
