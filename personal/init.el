@@ -11,6 +11,10 @@
 (load "server")
 (unless (server-running-p) (server-start))
 
+;; Set fill-column to 80 (except in org-mode)
+(setq-default fill-column 80)
+(add-hook 'org-mode-hook (lambda () (setq-default fill-column 70)))
+
 ;; Open vterm from crux-visit-term-buffer
 (defun crux-vterm (buffer-name)
     ;; TODO: Set crux-shell and buffer-name
