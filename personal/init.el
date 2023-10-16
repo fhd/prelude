@@ -115,3 +115,8 @@
 
 ;; Disable guru-mode
 (setq prelude-guru nil)
+
+;; Use Roswell for SLIME
+(load (expand-file-name "~/.roswell/helper.el"))
+(add-to-list 'slime-lisp-implementations '(roswell ("ros" "-Q" "run")))
+(setq slime-default-lisp 'roswell)
