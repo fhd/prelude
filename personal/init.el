@@ -120,3 +120,6 @@
 (load (expand-file-name "~/.roswell/helper.el"))
 (add-to-list 'slime-lisp-implementations '(roswell ("ros" "-Q" "run")))
 (setq slime-default-lisp 'roswell)
+
+;; Disable eglot inlay hints
+(add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1)))
