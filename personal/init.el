@@ -68,8 +68,9 @@
                                                   (c-mode)
                                                   (arduino-cli-mode)))))
 
-;; Use nxml-mode for .(a)xaml files
+;; Use nxml-mode for .(a)xaml and .csproj files
 (add-to-list 'auto-mode-alist '("\\.a?xaml$" . nxml-mode))
+(add-to-list 'auto-mode-alist '("\\.csproj$" . nxml-mode))
 
 ;; Use plantuml-mode for .puml files
 (add-to-list 'auto-mode-alist '("\\.puml$" . plantuml-mode))
