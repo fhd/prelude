@@ -5,7 +5,8 @@
                             arduino-cli-mode
                             rg
                             csharp-mode
-                            plantuml-mode))
+                            plantuml-mode
+                            dap-mode))
 
 ;; Start server
 (load "server")
@@ -124,3 +125,13 @@
 
 ;; Disable eglot inlay hints
 (add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1)))
+
+;; Set up dap-mode
+(dap-auto-configure-mode t)
+(add-hook 'dap-stopped-hook (lambda (arg) (call-interactively #'dap-hydra)))
+(require 'dap-netcore)
+(setq dap-netcore-download-url
+      "https://github.com/Samsung/netcoredbg/releases/download/3.0.0-1012/netcoredbg-linux-amd64.tar.gz")
+
+;; Make treemacs windows keyboard navigable (double check that this works)
+(customize-set-variable 'treemacs-is-never-other-window nil)
