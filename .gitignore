@@ -33,3 +33,5 @@ var/
 gotools/
 eln-cache/
 .dap-breakpoints
+/anaconda-mode
+
