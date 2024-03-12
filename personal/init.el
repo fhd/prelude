@@ -97,7 +97,7 @@
 
 ;; Fix odd indentation after const in js(2)-mode
 ;; This is a pretty nasty workaround I found here:
-;; https://mbork.pl/2022-03-14_Proper_indentation_after_a_const_in_Emacs
+;; https://debbugs.gnu.org/cgi/bugreport.cgi?bug=40760
 ;; Not sure how well it's gonna age...
 (setq js--declaration-keyword-re "\\<\\(let\\|var\\)\\>")
 
