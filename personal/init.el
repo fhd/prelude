@@ -141,3 +141,6 @@
 
 ;; Make treemacs windows keyboard navigable (double check that this works)
 (customize-set-variable 'treemacs-is-never-other-window nil)
+
+;; Activate column ruler globally
+(global-display-fill-column-indicator-mode)
