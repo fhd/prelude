@@ -144,3 +144,36 @@
 
 ;; Activate column ruler globally
 (global-display-fill-column-indicator-mode)
+
+;; Customise whitespace-mode symbols and colours
+
+(setq whitespace-style
+      '(face
+        tabs
+        tab-mark
+        trailing
+        missing-newline-at-eof
+        space-after-tab::tab
+        space-after-tab::space
+        space-before-tab::tab
+        space-before-tab::space))
+
+(defun my-whitespace-faces (&rest _)
+  (let ((bg (face-background 'default))
+        (fg (face-foreground 'shadow)))
+    (custom-set-faces
+     `(whitespace-big-indent ((t :background ,bg)))
+     `(whitespace-empty ((t :background ,bg)))
+     `(whitespace-hspace ((t :background ,bg :foreground ,fg)))
+     `(whitespace-indentation ((t :background ,bg :foreground ,fg)))
+     `(whitespace-line ((t :background ,bg :foreground ,fg)))
+     `(whitespace-newline ((t :background ,bg :foreground ,fg)))
+     `(whitespace-space ((t :background ,bg :foreground ,fg)))
+     `(whitespace-space-after-tab ((t :inherit warning :background ,bg)))
+     `(whitespace-space-before-tab ((t :inherit warning :background ,bg)))
+     `(whitespace-tab ((t :background ,bg :foreground ,fg)))
+     `(whitespace-trailing ((t :background ,bg)))
+     `(fill-column-indicator ((t :foreground ,(face-background 'fringe)))))))
+
+(add-hook 'enable-theme-functions #'my-whitespace-faces)
+(add-hook 'after-init-hook #'my-whitespace-faces)
