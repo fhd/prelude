@@ -182,3 +182,7 @@
 ;; I've figured out how to get Emacs to stop messing up indentation of files
 ;; that uses tabs, specifically in php-mode and js-mode.
 (electric-indent-mode -1)
+
+;; Open mailto: links in external application.
+(setq browse-url-generic-program "open")
+(setq browse-url-mailto-function 'browse-url-generic)
