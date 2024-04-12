@@ -177,3 +177,8 @@
 
 (add-hook 'enable-theme-functions #'my-whitespace-faces)
 (add-hook 'after-init-hook #'my-whitespace-faces)
+
+;; Stop Emacs from reindenting code after newline etc. Can be reenabled once
+;; I've figured out how to get Emacs to stop messing up indentation of files
+;; that uses tabs, specifically in php-mode and js-mode.
+(electric-indent-mode -1)
